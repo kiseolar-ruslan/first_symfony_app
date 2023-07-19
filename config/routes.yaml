@@ -1,5 +1,25 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource:
+    path:      ../src/Controller/
+    namespace: App\Controller
+  type: attribute
+
+#Route
+blog_index:
+  path:       /blog/{page}
+  # значення контролера має формат 'controller_class::method_name'
+  controller: App\Controller\BlogController::index
+  methods:    GET
+  defaults:
+    page: 1
+  requirements:
+    #a regular expression that matches a single-digit number of any length
+    page: '\d+'
+
+blog_show:
+  path:       /blog/{slug}
+  # значення контролера має формат 'controller_class::method_name'
+  controller: App\Controller\BlogController::show
+  methods:    GET
+
+
