@@ -17,7 +17,6 @@ blog_index:
     #a regular expression that matches a single-digit number of any length
     page: '\d+'
 
-
 blog_show:
   path:       /blog/{slug}
   # значення контролера має формат 'controller_class::method_name'
@@ -25,5 +24,11 @@ blog_show:
   methods:    GET
   defaults:
     title: "Blog Show"
+
+lucky_page:
+  path:       /lucky/number/{maxInt}
+  controller: App\Controller\LuckyController::number
+  methods:    GET
+
 
 
