@@ -30,5 +30,17 @@ lucky_page:
   controller: App\Controller\LuckyController::number
   methods:    GET
 
+redirect_page:
+  path:       /redirect
+  controller: App\Controller\RedirectController::index
+  methods:    GET
 
+blog_service:
+  path:       /service
+  controller: App\Controller\ServiceController
+  methods:    GET
 
+random_message:
+  path:       /random
+  controller: App\Controller\RandomMessageController
+  methods:    GET
