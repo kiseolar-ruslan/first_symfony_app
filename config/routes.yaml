@@ -44,3 +44,10 @@ random_message:
   path:       /random
   controller: App\Controller\RandomMessageController
   methods:    GET
+
+download:
+  path:       /download
+  controller: App\Controller\DownloadController
+  methods:    GET
+
+
